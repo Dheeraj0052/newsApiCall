@@ -50,7 +50,7 @@ public class adapter extends RecyclerView.Adapter<adapter.viewholder> {
             super(itemView);
             tvname=itemView.findViewById(R.id.tvname);
             tvid=itemView.findViewById(R.id.tvid);
-            urltoimage=itemView.findViewById(R.id.Urltoimage);
+
         }
     }
 }

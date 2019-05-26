@@ -1,25 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
               android:orientation="vertical"
+              android:background="#55062E49"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
 
-<TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvname"
-/>
-<TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvid"
-/>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:id="@+id/tvname"
+    />
 
-<ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Urltoimage"
-/>
+    <ImageView
+            android:layout_width="267dp"
+            android:layout_gravity="center"
+            android:layout_height="120dp"
+            android:id="@+id/image"
+    />
+    <android.support.v7.widget.CardView
+            app:cardCornerRadius="25dp"
+            app:cardBackgroundColor="#0F83A0"
+            android:layout_gravity="center"
+            android:background="#0E5B7A"
+            app:cardElevation="28dp"
+            android:layout_width="317dp"
+            android:layout_height="124dp">
+        <TextView
+                android:layout_width="311dp"
+                android:layout_gravity="center"
+             android:shadowRadius="30"
+                android:layout_height="120dp"
+                android:id="@+id/tvid"
+        />
+
+    </android.support.v7.widget.CardView>
 
 </LinearLayout>
