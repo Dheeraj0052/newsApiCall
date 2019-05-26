@@ -10,9 +10,9 @@ import okhttp3.*
 import java.io.IOException
 
 class MainActivity : AppCompatActivity() {
-    private val urlforapi="https://newsapi.org/v2/everything?q=bitcoin&from=2019-02-21&sortBy=publishedAt&apiKey=5f4aee5cfeb7406d9c6a40cc4bdd978e"
+    private val urlforapi="https://newsapi.org/v2/everything?domains=wsj.com&apiKey=21bb241788a24064917fffc087581b4c"
      private val gson = Gson()
-    private val resultarray = arrayListOf<Result>()
+    private val resultarray = arrayListOf<ArticlesItem>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,11 +23,11 @@ class MainActivity : AppCompatActivity() {
             override fun onResponse(call: Call, response: Response) {
                 val responseBody = response.body()
                 val result =responseBody?.string()
-                val parsedobject= gson.fromJson(result,Result::class.java)
-                Log.e("tag",parsedobject.status)
+                val parsedobject= gson.fromJson(result,ArticlesItem::class.java)
+//                Log.e("tag",parsedobject.status)
                 resultarray.add(parsedobject)
                 runOnUiThread (){
-                    val ap = adapter(this@MainActivity,resultarray )
+                    val ap =NewsAdapter(this@MainActivity,resultarray)
                     rcView.layoutManager = LinearLayoutManager(baseContext)
                     rcView.adapter = ap
 
