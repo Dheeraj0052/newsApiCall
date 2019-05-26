@@ -4,7 +4,7 @@
               android:orientation="vertical"
               android:background="#55062E49"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="wrap_content">
 
 
     <TextView
@@ -12,29 +12,32 @@
             android:layout_height="53dp"
             android:id="@+id/tvname"
     />
+    <LinearLayout android:layout_width="match_parent"
+                  android:orientation="horizontal"
+                  android:layout_height="wrap_content">
 
-    <ImageView
-            android:layout_width="267dp"
-            android:layout_gravity="center"
-            android:layout_height="120dp"
-            android:id="@+id/image"
-    />
+        <ImageView
+                android:layout_width="155dp"
+                android:layout_gravity="center"
+                android:layout_height="120dp"
+                android:id="@+id/image"
+        />
     <android.support.v7.widget.CardView
             app:cardCornerRadius="25dp"
             app:cardBackgroundColor="#0F83A0"
             android:layout_gravity="center"
             android:background="#0E5B7A"
             app:cardElevation="28dp"
-            android:layout_width="317dp"
+            android:layout_width="250dp"
             android:layout_height="124dp">
         <TextView
-                android:layout_width="311dp"
+                android:layout_width="243dp"
                 android:layout_gravity="center"
-             android:shadowRadius="30"
+                android:shadowRadius="30"
                 android:layout_height="120dp"
                 android:id="@+id/tvid"
         />
 
     </android.support.v7.widget.CardView>
-
+</LinearLayout>
 </LinearLayout>
