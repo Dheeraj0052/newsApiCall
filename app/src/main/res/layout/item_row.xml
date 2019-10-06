@@ -5,22 +5,31 @@
               android:layout_height="match_parent">
 
 
-<TextView
-        android:layout_width="wrap_content"
-        android:text="chdgjs"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvname"
-/>
-<TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvid"
-/>
+    <TextView
+            android:id="@+id/tvNews"
+            android:layout_width="262dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="News Title"
+            android:textSize="40dp"
+            android:textStyle="bold" />
 
-<ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Urltoimage"
-/>
+    <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:text="News Subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="42dp" />
+
+    <ImageView
+            android:id="@+id/UrlToImage"
+            android:layout_width="215dp"
+            android:src="@drawable/ic_launcher_foreground"
+            android:layout_height="132dp"
+            android:layout_gravity="center" />
 
 </LinearLayout>
