@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 public class adapter extends RecyclerView.Adapter<adapter.viewholder> {
@@ -36,6 +38,8 @@ public class adapter extends RecyclerView.Adapter<adapter.viewholder> {
         viewholder.tvid.setText(articlesItems.get(i).getSource().toString());
 //          viewholder.tvid.setText((Integer) articlesItems.get(i).getSource().getId());
 
+        Picasso.get().load(articlesItems.get(i).getUrlToImage()).into(viewholder.urltoNewsImage);
+
 
     }
 
@@ -47,12 +51,14 @@ public class adapter extends RecyclerView.Adapter<adapter.viewholder> {
     public class viewholder extends RecyclerView.ViewHolder {
         TextView tvname, tvid;
         ImageView urltoimage;
+        ImageView urltoNewsImage;
 
         public viewholder(@NonNull View itemView) {
             super(itemView);
             tvname = itemView.findViewById(R.id.tvNews);
             tvid = itemView.findViewById(R.id.tvSubtitle);
             urltoimage = itemView.findViewById(R.id.UrlToImage);
+            urltoNewsImage = itemView.findViewById(R.id.UrlToNewsImage);
         }
     }
 }

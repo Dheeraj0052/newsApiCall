@@ -27,9 +27,18 @@
 
     <ImageView
             android:id="@+id/UrlToImage"
-            android:layout_width="215dp"
-            android:src="@drawable/ic_launcher_foreground"
-            android:layout_height="132dp"
-            android:layout_gravity="center" />
+            android:layout_width="255dp"
+            android:layout_height="147dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_launcher_foreground" />
+
+
+    <ImageView
+            android:id="@+id/UrlToNewsImage"
+            android:layout_width="268dp"
+            android:layout_height="160dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_launcher_foreground" />
 
 </LinearLayout>
